@@ -23,6 +23,7 @@ git -C device switch imu_serial
 
 - **不要用 `--recursive`**：`host` 的 `localization` 历史里引用了 VINS-Fusion 子模块（体积大且已不是主方案）；`tennis_weight` 是一个没有 URL 的坏子模块引用，待清理。
 - 拉取子仓库最新代码：`git submodule update --remote host device`。
+- **Windows 上克隆到较深的目录时**，`device` 里 SquareLine 工程的文件路径会超过 260 字符导致检出失败，需要先开启长路径：`git config --global core.longpaths true`（或只对该子模块设置）。Linux / 云端没有这个问题。
 
 ## 子模块工作流
 
