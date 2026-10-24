@@ -1,0 +1,8 @@
+[submodule "host"]
+	path = host
+	url = https://github.com/SHKinsem/HelloBalls-Host.git
+	branch = rewrite/v2
+[submodule "device"]
+	path = device
+	url = https://github.com/SHKinsem/HelloBalls-2.0.git
+	branch = imu_serial
